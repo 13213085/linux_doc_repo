@@ -1,0 +1,13 @@
+找不到pycharm？
+应用程序搜索
+进入ttf后返回桌面？
+键入Ctrl+Alt+F7，在ubantu下
+ubuntu root权限设置？
+sudo passwd root设置root密码
+先输入账户密码，再设置root密码
+普通用户登录后使用sudo -s -H切换root权限
+git安装？
+apt-get install git
+从root切换会普通用户？
+su sanshui
+

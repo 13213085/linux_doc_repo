@@ -12,5 +12,48 @@ apt-get install git
 su sanshui
 libtreoffice writer文字格式改变？
 开启了记录更改功能
+linux强制关闭程序？
+命令行gnome-system-monitor
+从python命令行下退出？
+Ctrl+D
+python版本切换？
+1.virtualenvwrapper 切换版本
+sudo apt-get install virtualenvwrapper
+第一次安装完成后需要，先设置一个变量WORKON_HOME，它将作为所有环境的前缀，并且source /usr/local/bin/virtualenvwrapper.sh
+mkdir -p $WORKON_HOME$ export WORKON_HOME=~/Envs$ source /usr/local/bin/virtualenvwrapper.sh
+当你需要使用Python2开发项目时，建立一个Python2的虚拟环境：
+$ mkvirtualenv -p /usr/bin/python2 env27
+当你需要Python3开发时：
+$ mkvirtualenv -p /usr/bin/python3.4 env34
+然后可以随时切换不同的虚拟环境：
+$ workon env27  # 进入Python2环境
+$ workon env34  # 进入Python3环境
+2.alias python='/usr/bin/python3'
+$ python --version
+Python 3.4.3  # 版本已经改变
+3.$ ln -s python /usr/bin/python3
+$ python --version
+Python 3.4.3
+4.采用update-alternatives 切换版本
+建立python的组,并添加Python2和Python3的可选项
+$ sudo update-alternatives --install /usr/bin/python python /usr/bin/python2.7 2 # 添加Python2可选项，优先级为2
+$ sudo update-alternatives --install /usr/bin/python python /usr/bin/python3.4 1 #添加Python3可选项，优先级为1
+sudo update-alternatives --config python
+http://blog.csdn.net/justdoithai/article/details/70310095
+用pip给python3安装包？
+python3 -m pip install
+在linux直接运行.py文件？
+chmod +x .py文件名
+在文件头部加#!/usr/bin/python
+在windows下编译的文件使用dos2unix转格式
+在linux下运行python文件输入命令行参数？
+直接加在.py后面 如./pw.py bjtumail
+？pyperclip出现以下错误：
+You may get an error message that says: “Pyperclip could not find a copy/paste mechanism for your system. Please see https://pyperclip.readthedocs.io/en/latest/introduction.html#not-implemented-error
+使用以下命令之一：
+    sudo apt-get install xsel to install the xsel utility.
+    sudo apt-get install xclip to install the xclip utility.
+    pip install gtk to install the gtk Python module.
+    pip install PyQt4 to install the PyQt4 Python module.
 
 
